@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bitcoin Course Launcher</title>
+    <!--Bootstrap Files-->
+    <link href="./css/bootstrap.css" rel="stylesheet">
+    <script src="./js/bootstrap.js"></script>
+    <!--Main StyleSheet-->
+    <link href="./css/style.css" rel="stylesheet">
+    <!--Google Fonts-->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!--Logo of Bitcoin-->>
+    <div class="container modal-header">
+        <div class="container d-flex">
+            <div class=" container justify-content-left">
+                <img alt="1" class="img-fluid" id="logo-icon"
+                    src="https://bitcoin.org/img/icons/logotop.svg?1608131429">
+
+            </div>
+        </div>
+    </div>
+    <div class="progress">
+        <div class="progress-bar" id="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+            aria-valuemax="100"></div>
+    </div>
+    <div id="doc" class="d-none">
+        <div class="container ">
+            <p class="btc-data"><span class="valute">USD: </span><span class="info"><span
+                        id="response-usd"></span>$</span>
+                <img alt="" class="arrow" id="usd-down" src="./images/downarrow.ico" style="display: none;">
+                <img alt="" class="arrow" id="usd-up" src="./images/uparrow.ico" style="display: none;">
+            </p>
+            <p class="btc-data"><span class="valute">RUB: </span><span class="info"><span
+                        id="response-rub"></span>₽</span>
+                <img alt="" class="arrow" id="rub-down" src="./images/downarrow.ico" style="display: none;">
+                <img alt="" class="arrow" id="rub-up" src="./images/uparrow.ico" style="display: none;">
+            </p>
+        </div>
+
+        <div class="container p-0">
+            <div class="d-flex justify-content-center">
+                <button class="btn btn-warning btn-sm" id="more" type="button">Калькулятор</button>
+            </div>
+        </div>
+        <div class="container radio_buttons d-none" id="calculator">
+            <div class="d-block">
+
+
+                <div class="form-check"><input checked="chacked" class="form-check-input radio" id="fr-btc" name="r1"
+                        type="radio" value="2"><label class="form-check-label" for="fr-btc">Из
+                        Биткоина</label></div>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input radio" id="in-btc" name="r1" type="radio" value="1"><label
+                    class="form-check-label" for="in-btc">В Биткоин</label>
+            </div>
+            <div class="m-l-30">
+                <div class="d-none d-block" id="radioExt" style="margin-bottom: 5px;">
+                    <div class="form-check"><input chacked="chacked" checked class="form-check-input radio" id="fr-rub"
+                            name="r2" type="radio" value="3"><label class="form-check-label" for="fr-btc">Из
+                            рубля</label></div>
+                    <div class="form-check">
+                        <input class="form-check-input radio" id="fr-usd" name="r2" type="radio" value="4">
+                        <label class="form-check-label" for="fr-usd">Из Доллара</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container mt-2">
+                <input class="dark  form-control bg-dark" id="calculator-input" type="number">
+                <button class="calc dark form-control btn btn-warning btn-sm" id="calculate-button"
+                    type="button">Расчёт</button>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <div>
+        <p class="mt-2 result d-none"><span id="result-usd"></span>$</p>
+        </li>
+        <p class="result d-none"><span id="result-rub"></span>₽</p>
+        </ul>
+        <p class="mt-3 d-none" id="result-btc-div" style="text-align: center; font-size: 1rem;"><span
+                id="result-btc"></span>₿</p>
+    </div>
+    <div class="d-none" id="min" style="width: 100%;text-align: center; ">
+        <a id="min" style="text-decoration: none; color: rgb(180, 180, 180);">Скрыть</a>
+    </div>
+    </div>
+    <script src="./js/popup.js"></script>
+    <script src="./js/calculator.js"></script>
+</body>
+
+</html>

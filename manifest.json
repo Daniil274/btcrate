@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+	"name": "Bitcoin course cheker",
+	"description": "онлайн курс биткоина",
+	"version": "1",
+	 "content_security_policy": "'unsafe-inline'",
+	"content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["./js/popup.js","./js/calculator.js","./js/bootstrap.js"]
+    }
+  ],
+	"icons": {"128": "icon_128.png"},
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+	},
+	"permissions": ["activeTab","https://cryptonator.com/"]
+}

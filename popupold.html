@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bitcoin Course Launcher</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <script src="./js/bootstrap.js"></script>
+
+    <!-- JavaScript Bundle with Popper.js -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #222222;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            margin: 0;
+            min-height: 180px;
+            padding: 0;
+            width: 235px;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .w {
+            width: 100%;
+        }
+
+        p {
+            font-size: large;
+            margin-bottom: -5px !important;
+            margin-top: 10px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .pg {
+            height: 800px;
+        }
+
+        span.valute {
+            color: rgb(216, 216, 216);
+            text-align: left;
+        }
+
+        span.info {
+            text-align: center;
+        }
+
+        span {
+            color: white;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        #logo-icon {
+            width: auto;
+        }
+
+        hr {
+            background-color: black;
+            color: black;
+        }
+
+        .arrow {
+            margin: 5px;
+            height: 30px;
+        }
+
+        #calculator {
+            display: inline-flex;
+        }
+        .calc{
+            margin-left: 8px;
+        }
+        .dark {
+            background-color: #686868;
+            border-radius: 2px;
+            border: none;
+            /*margin: 2px;*/
+            color: white;
+            margin-bottom: 8px;
+            outline: none;
+        }
+
+        .calc {
+            width: 58px;
+            font-size: small;
+        }
+
+        .modal-header {
+            border-bottom: black !important;
+        }
+
+        .d-none {
+            display: none!important;
+        }
+
+        .d-block {
+            display: inline-flex;
+        }
+
+        .result {
+            text-align: center;
+        }
+
+        .d-block {
+            display: block;
+        }
+        .radio{
+  content: '';
+  border-radius: 50%;
+  background: rgb(255, 153, 0)!important;
+  color: rgb(255, 174, 0)!important;
+  opacity: 0.5;
+  width: auto;
+  display: inline-block;
+  transition: .1s;
+}
+
+.radio:checked {
+    display: inline-block;
+    width: auto;
+  opacity: 1;
+  width: 15px;
+  height: 15px;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+    </style>
+
+</head>
+
+<body>
+    <div class="modal-header">
+        <div class="d-flex">
+            <div class="justify-content-center">
+                <h1 class="logo">
+                    <img id="logo-icon" src="https://bitcoin.org/img/icons/logotop.svg?1608131429" alt="1">
+                </h1>
+                <p> <span class="valute">USD: </span><span class="info"><span id="response-usd"></span>$</span><img
+                        class="arrow" id="usd-down" style="display: none;" src="/images/downarrow.ico" alt=""><img
+                        class="arrow" id="usd-up" style="display: none;" src="/images/uparrow.ico" alt=""></p>
+                <p> <span class="valute">RUB: </span><span class="info"><span id="response-rub"></span>₽</span><img
+                        class="arrow" id="rub-down" style="display: none;" src="/images/downarrow.ico" alt=""><img
+                        class="arrow" id="rub-up" style="display: none;" src="/images/uparrow.ico" alt=""></p>
+            </div>
+        </div>
+    </div>
+    <script id="popup" src="./js/popup.js"></script>
+    <div class="" style="width: 100%;text-align: center; ">
+        <a id="more" style="text-decoration: none; color: rgb(180, 180, 180);">Калькулятор</a>
+    </div>
+    <div id="calculator" class="radio_buttons d-none">
+        <div class="d-block">
+            <p style="font-size: small; margin-left: 10px;"><input class="radio" name="r1" value="1" id="in-btc"
+                     type="radio">&emsp;В Биткоин<br><input name="r1" checked="chacked" class="radio" value="2"
+                    id="fr-btc" type="radio">&emsp;Из Биткоина
+                <hr>
+            <div id="radioExt" style="margin-bottom: 5px;"class="d-none d-block">
+                <p style="font-size: small; margin-left: 10px;"><input class="radio" chacked name="r2" value="3"
+                        id="fr-rub"  type="radio">&emsp;Из рубля<br><input name="r2" class="radio"
+                        value="4" id="fr-usd" type="radio">&emsp;Из Доллара
+                </p>
+            </div>
+            <div class="">
+                <input class="dark " id="calculator-input" type="number">
+                <button type="button" class="calc dark" id="calculate-button">Расчёт</button>
+            </div>
+        </div>
+        <p class="result d-none"><span id="result-usd"></span>$</p>
+        <p class="result d-none"><span id="result-rub"></span>₽</p>
+        <p class="d-none" style="text-align: center;" id="result-btc-div"><span id="result-btc"></span>₿</p>
+        <div id="min" class="d-none" style="width: 100%;text-align: center; ">
+            <a id="min" style="text-decoration: none; color: rgb(180, 180, 180);">Скрыть</a>
+        </div>
+        <!-- <script src="/popup.js"></script>-->
+        <script src="./js/calculator.js"></script>
+</body>
+
+</html>
