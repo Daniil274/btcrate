@@ -1,6 +1,6 @@
 {
     "manifest_version": 2,
-	"name": "Bitcoin course cheker",
+	"name": "Bitcoin rate cheker",
 	"description": "онлайн курс биткоина",
 	"version": "1",
 	 "content_security_policy": "'unsafe-inline'",
